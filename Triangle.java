@@ -14,16 +14,34 @@ public class Triangle{
 	}
 	
 	public double getPerimeter(){
-		return (v1.distanceTo(v2) + v2.distanceTo(v3) + v1.distanceTo(v3));
+		return (Point.distance(v1,v2) + Point.distance(v2,v3) + Point.distance(v1,v3));
 	}
 
 	public Point getVertex(int index){
 		if (index == 0) {
-			return v1; }
+			return new Point (v1); 
+		}
 		if (index == 1) {
-			return v2; }
-		else {
-			return v3; }
+			return new Point (v2);
+ 		}
+		if (index == 2) {
+			return new Point (v3);
+ 		}
+		else{return null;}
+	}
+
+
+	public Point setVertex(int index, Point o){
+		if (index == 0) {
+			return v1 = new Point(o);
+		}
+		if (index == 1) {
+			return v2 = new Point(o);
+		}
+		if (index == 2) {
+			return v3 = new Point(o);
+		}
+		else{ return null;}
 	}
 
 	public String toString(){
@@ -32,4 +50,6 @@ public class Triangle{
 				+ v3.getX() + "," + v3.getY() + ")";
 	}
 }
+
+
 

@@ -28,5 +28,9 @@ public class Point{
     return Math.sqrt((this.getX()-b.getX())*(this.getX()-b.getX())
                     +(this.getY()-b.getY())*(this.getY()-b.getY()));
   }
+  
+  public String toString(){
+    return "("+this.getX()+","+this.getY()+")";
+  }
 }
 
